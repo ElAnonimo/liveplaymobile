@@ -1,6 +1,6 @@
 #### Live Play Mobile
 
-This app is about making a list on entries of various data types. You can fetch the list, edit an entry, or add one.
+This app is about making a list of entries of various data types. You can fetch the list, edit an entry, or add one.
 
 Please add the deps and observe the note below before you run it. To do so execute `npm run start` and watch for a new browser window to open.
 
