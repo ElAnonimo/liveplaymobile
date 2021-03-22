@@ -50,6 +50,7 @@ const AddConfig = () => {
 
   return (
     <Fragment>
+      <input type="button" value="Go to the record list" onClick={() => history.push("/")} />
       {loading
         ? <p>Loading...</p>
         : (

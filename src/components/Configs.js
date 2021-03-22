@@ -4,6 +4,7 @@ import React, {
   useEffect,
   useRef
 } from "react";
+import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
 import { getConfigs, editConfig } from "../actions/configs";
@@ -46,6 +47,8 @@ const Configs = () => {
 
   const dispatch = useDispatch();
   const { configs, loading } = useSelector(state => state.configs);
+
+  const history = useHistory();
 
   useEffect(() => {
     dispatch(getConfigs());
@@ -211,6 +214,7 @@ const Configs = () => {
         ? <p>Loading...</p>
         : (
           <Fragment>
+            <input type="button" value="Add a Record" onClick={() => history.push("/add")} />
             {!isEditing && configs?.length > 0 && configs.map(cfg =>
               <div key={cfg.item_id}>
                 <ConfigItem key={uuidv4()} data={cfg} />
