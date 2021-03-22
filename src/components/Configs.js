@@ -84,8 +84,6 @@ const Configs = () => {
       } else {
         return rec;
       }
-
-      // return null;
     });
 
     if (compareObjects(
