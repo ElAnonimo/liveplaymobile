@@ -78,12 +78,14 @@ const Configs = () => {
             ...rec,
             [name]: val
           }
+        } else {
+          return null;
         }
       } else {
         return rec;
       }
 
-      return null;
+      // return null;
     });
 
     if (compareObjects(
