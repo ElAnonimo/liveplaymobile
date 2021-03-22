@@ -42,6 +42,8 @@ const AddConfig = () => {
   const onTypeChange = evt => {
     setType(evt.target.value);
     setValue("");
+    setNumber(0);
+    setChecked(false);
   };
 
   const onValueChange = evt => {
